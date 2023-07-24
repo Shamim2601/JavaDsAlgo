@@ -1,10 +1,19 @@
 package SolarSystem;
 
+import java.util.ArrayList;
+
 public class Planet {
     private String Name;
     private double Radius;
 
+    private ArrayList<Satellite> Satellites;
+
+    public Planet(){
+        Satellites = new ArrayList<Satellite>();
+    }
+
     public Planet(String name) {
+        Satellites = new ArrayList<Satellite>();
         Name = name;
     }
 
@@ -22,5 +31,13 @@ public class Planet {
 
     public void setRadius(double radius) {
         Radius = radius;
+    }
+
+    public ArrayList<Satellite> getSatellites(){
+        return Satellites;
+    }
+
+    public void addSatellite(Satellite sat){
+        Satellites.add(sat);
     }
 }
