@@ -26,14 +26,5 @@ public class BinarySearch {
                 high = mid - 1;
             }
         }
-
-        int[] numbers = new int[20];
-        numbers[3] = 78;
-        numbers[11] = 56;
-        numbers[6] = 12;
-
-        int key = scanner.nextInt();
-
-        // search for the key in the array using binary search
     }
 }
