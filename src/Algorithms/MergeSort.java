@@ -88,6 +88,12 @@ public class MergeSort {
 
         MergeSort ob = new MergeSort();
         ob.sort(arr, 0, arr.length - 1);
+        // time complexity: O(nlogn)  // 16*log16=64
+        // 2^3=8 => log2(8) = 3
+        // log2(16) = 4
+        // log1024 = 10
+        // 1 kB = 1024 Byte
+        // 1 Byte = 8 bit
 
         System.out.println("\nSorted array is");
         printArray(arr);
