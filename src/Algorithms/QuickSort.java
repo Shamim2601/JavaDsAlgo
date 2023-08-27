@@ -69,7 +69,6 @@ public class QuickSort {
         int[] arr = { 10, 7, 8, 9, 1, 5 };
         int N = arr.length;
 
-
         quickSort(arr, 0, N - 1);
         System.out.println("Sorted array:");
         printArr(arr);
