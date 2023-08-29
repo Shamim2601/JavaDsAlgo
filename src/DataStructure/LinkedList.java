@@ -33,6 +33,6 @@ public class LinkedList {
             System.out.print("->("+currentNode.getNext().getValue()+")"); // ->(6)->(8)
             currentNode = currentNode.getNext(); // (6), (8)
         }
-
+        System.out.println();
     }
 }
