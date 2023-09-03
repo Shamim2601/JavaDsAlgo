@@ -23,7 +23,12 @@ public class LinkedList {
 
     private static void addVal(Node head, int val) {
         Node newNode = new Node(val);
+        Node currentNode = head; // (2)
+        while(currentNode.getNext()!=null){ // (6), (8), null
+            currentNode = currentNode.getNext(); // (6), (8)
+        }
 
+        currentNode.setNext(newNode);
     }
 
     private static void printLL(Node head) {
