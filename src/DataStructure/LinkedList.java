@@ -32,13 +32,24 @@ public class LinkedList {
 
     public void addValSorted(int val) {
         Node newNode = new Node(val);  // 7
+        if(val<Head.getValue()){
+            Node prevHead = Head;
+            Head = newNode;
+            Head.setNext(prevHead);
+            return;
+        }
         Node currentNode = Head; // (2)
-        while(currentNode.getNext().getValue()<newNode.getValue()){ // 2->6->7   ->8
+        Node prevNode = null;
+        while(currentNode.getValue()<val){ // 2->3->7
+            if(currentNode.getNext()==null){
+                currentNode.setNext(newNode);
+                return;
+            }
+            prevNode = currentNode;
             currentNode = currentNode.getNext();
         }
-        Node nextNode = currentNode.getNext();
-        currentNode.setNext(newNode);
-        newNode.setNext(nextNode);
+        prevNode.setNext(newNode);
+        newNode.setNext(currentNode);
     }
 
     public void printLL() {
