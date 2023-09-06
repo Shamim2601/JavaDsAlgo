@@ -31,7 +31,7 @@ public class LinkedList {
     }
 
     public void addValSorted(int val) {
-        Node newNode = new Node(val);  // 7
+        Node newNode = new Node(val);  // (7)
         if(val<Head.getValue()){
             Node prevHead = Head;
             Head = newNode;
